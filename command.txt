@@ -1,0 +1,4 @@
+# Arrêter une machine virtuelle	
+az vm stop --resource-group group-Link-Stato --name LinkStato-vm
+# Démarrer une machine virtuelle
+az vm start --resource-group group-Link-Stato --name LinkStato-vm
