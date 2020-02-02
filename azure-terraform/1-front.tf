@@ -5,8 +5,8 @@ resource "azurerm_app_service_plan" "front" {
   resource_group_name = "${azurerm_resource_group.main.name}"
 
   sku {
-    tier = "Standard"
-    size = "S1"
+    tier = "Standard" //la FunctionApp a besoin de Dynamic
+    size = "S1" //la FunctionApp a besoin de Y14
   }
 }
 
