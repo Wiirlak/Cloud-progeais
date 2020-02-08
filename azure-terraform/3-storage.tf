@@ -4,9 +4,9 @@ resource "azurerm_resource_group" "storage" {
 }
 
 resource "azurerm_storage_account" "storage" {
-  name                     = "storageaccountname"
-  resource_group_name      = "${azurerm_resource_group.storage.name}"
-  location                 = "${azurerm_resource_group.storage.location}"
+  name                     = "${var.prefix}riusstorage12369871"
+  resource_group_name      = azurerm_resource_group.storage.name
+  location                 = azurerm_resource_group.storage.location
   account_tier             = "Standard"
   account_replication_type = "GRS"
 
