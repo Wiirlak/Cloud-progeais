@@ -1,12 +1,7 @@
-resource "azurerm_resource_group" "database" {
-  name     = "api-rg-pro"
-  location = "West Europe"
-}
-
 resource "azurerm_mysql_server" "database" {
   name                = "${var.prefix}-mysql-server-1"
-  location            = azurerm_resource_group.database.location
-  resource_group_name = azurerm_resource_group.database.name
+  location            = azurerm_resource_group.main.location
+  resource_group_name = azurerm_resource_group.main.name
 
   sku_name = "B_Gen5_1"
 
