@@ -19,7 +19,12 @@ resource "azurerm_app_service" "front" {
 
   site_config {
     dotnet_framework_version = "v4.0"
-    scm_type                 = "LocalGit"
+    scm_type                 = "ExternalGit"
+  }
+
+  source_control {
+    repo_url = "https://github.com/ZineddineBoudaoud/cloudfront"
+    branch   = "master"  
   }
 
   app_settings = {

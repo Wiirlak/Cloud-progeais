@@ -17,6 +17,11 @@ resource "azurerm_app_service" "back" {
 
   site_config {
     dotnet_framework_version = "v4.0"
-    scm_type                 = "LocalGit"
+    scm_type                 = "ExternalGit"
+  }
+
+  source_control {
+    repo_url = "https://github.com/OaBind/cloudback"
+    branch   = "master"  
   }
 }
