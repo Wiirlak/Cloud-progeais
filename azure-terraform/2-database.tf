@@ -19,8 +19,8 @@ resource "azurerm_mysql_server" "database" {
 
 resource "azurerm_mysql_database" "database" {
   name                = "exampledb"
-  resource_group_name = azurerm_resource_group.database.name
-  server_name         = azurerm_mysql_server.database.name
+  resource_group_name = azurerm_resource_group.main.name
+  server_name         = azurerm_mysql_server.main.name
   charset             = "utf8"
   collation           = "utf8_unicode_ci"
 }
