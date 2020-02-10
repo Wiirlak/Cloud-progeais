@@ -7,3 +7,7 @@
 
 # .tfvars files
 *.tfvars
+scripts.ps1
+
+.idea
+api/node_modules
