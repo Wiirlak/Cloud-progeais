@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Occupation</th>
+    <th scope="col">Capacity</th>
+    <th scope="col">Current Temperature</th>
+    <th scope="col">Perfect Temperature</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr *ngFor="let aquarium of aquariums">
+    <td> {{ aquarium.name }}</td>
+    <td> {{ aquarium.occupation }}</td>
+    <td> {{ aquarium.capacity }}</td>
+    <td> {{ aquarium.currTemp }}</td>
+    <td> {{ aquarium.perfectTemp }}</td>
+  </tr>
+</tbody>
+</table>
